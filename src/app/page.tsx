@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import { montserrat } from "@/app/layout";
 
 function useCounter(end: number, duration: number) {
   const [count, setCount] = useState(0);
@@ -36,44 +37,37 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="bg-white text-black font-sans scroll-smooth">
+    <main className=" text-black font-sans scroll-smooth">
      
      
      
      
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50 px-6 py-4 flex justify-between items-center">
-      <div className="h-12 w-auto flex items-center">
-  <img
-    src="/logo.png"
-    alt="Taller LEAR"
-    className="max-h-full object-contain"
-  />
-</div>
-
-
-<nav className="space-x-6 hidden md:flex text-[#ff5c02] font-bold">
-  <a href="#servicios" className="hover:underline hover:opacity-90 transition">Servicios</a>
-  <a href="#nosotros" className="hover:underline hover:opacity-90 transition">Nosotros</a>
-  <a href="#contacto" className="hover:underline hover:opacity-90 transition">Contacto</a>
-</nav>
-
-</header>
+ 
 
 
 
 
-
-<section className="py-18 px-14 bg-[#1a1a1a]">
-  <div className="max-w-7xl w-full grid md:grid-cols-2 gap-6 items-center">
+<section className="py-32 px-14 bg-[#1a1a1a]">
+<video
+          className="absolute top-0 left-0 w-full h-full opacity-40 object-cover z-0"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videoauto.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+  <div className="max-w-7xl relative w-full grid md:grid-cols-2 gap-6 items-center">
     
     {/* Columna izquierda - Texto centrado */}
     <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left pt-8 md:pl-15">
 
 
-      <h2 className="text-5xl text-[#ff5c02] font-bold mb-6 ">
+      <h1 className={`${montserrat.className} text-5xl  text-[#ff5c02] font-extrabold mb-6`}>
         Expertos en Mecánica Integral y GNC
-      </h2>
+      </h1>
       
 
       <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
@@ -129,18 +123,7 @@ export default function Home() {
  
 
 
-<section className="bg-white py-25 text-white relative overflow-hidden">
-  <video
-    className="absolute top-0 left-0 w-full h-full object-cover opacity-90 z-0"
-    autoPlay
-    loop
-    muted
-    playsInline
-  >
-    <source src="/videoauto.mp4" type="video/mp4" />
-    Tu navegador no soporta el video.
-  </video>
-</section>
+
 
 
 
@@ -150,7 +133,7 @@ export default function Home() {
   <div className="h-full w-full bg-[#ff5c02] animate-slide" />
 </div>
   <div className="relative z-10 max-w-7xl mx-auto">
-    <h2 className="text-4xl font-bold mb-16 text-[#ff5c02] mt-10">Servicios Destacados </h2>
+    <h2 className={` ${montserrat.className} text-4xl font-semibold mb-16 text-[#ff5c02] mt-10`}>Servicios Destacados </h2>
     <div className="grid gap-12 md:grid-cols-3">
       <div className="p-8 border rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out bg-white/80 backdrop-blur-md">
         <h3 className="text-2xl font-semibold mb-4">Mecánica Integral</h3>
@@ -225,7 +208,7 @@ export default function Home() {
 
 
       {/* VENTAJAS */}
-<section id="nosotros" className="py-20 px-4 bg-[#1a1a1a] text-center">
+<section id="nosotros" className="py-12 px-4 bg-[#1a1a1a] text-center">
   {/* LÍNEA ANIMADA SUPERIOR */}
   <div className="h-0.5 w-full overflow-hidden mb-12">
   <div className="h-full w-full bg-[#ff5c02] animate-slide" />
@@ -259,8 +242,9 @@ export default function Home() {
 
 
       {/* FOOTER */}
-<footer className="bg-[#1a1a1a] text-white py-8 px-6 ">
-<div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center justify-center text-center">
+<footer className="bg-[#1a1a1a] text-white pb-8 px-6 w-full ">
+  
+<div className="max-w-7xl mx-auto gap-8 w-full items-start flex flex-center justify-around text-center">
 
 
     {/* Ubicación a la izquierda */}
@@ -273,7 +257,7 @@ export default function Home() {
     </div>
 
     {/* Contacto en el centro */}
-    <div className="flex flex-col items-center md:items-start text-white space-y-3">
+    <div className="flex flex-col items-center md:items-start w-48 text-white space-y-3">
       <h4 className="text-[#ff5c02] font-bold text-lg">Contacto</h4>
       <p className="text-sm">info@leargnc.com.ar</p>
       <p className="text-sm">+54 11 3347 3337</p>
@@ -281,7 +265,7 @@ export default function Home() {
     </div>
 
     {/* Redes sociales a la derecha */}
-    <div className="flex flex-col items-center md:items-start text-white space-y-3">
+    <div className="flex flex-col items-center md:items-start w-48 text-white space-y-3">
       <h4 className="text-[#ff5c02] font-bold text-lg">Redes Sociales</h4>
       <p className="text-sm hover:underline cursor-pointer">Instagram</p>
       <p className="text-sm hover:underline cursor-pointer">Facebook</p>
@@ -294,18 +278,7 @@ export default function Home() {
     © 2025 Taller LEAR. Todos los derechos reservados.
   </div>
 </footer>
-<section className="bg-white py-25 text-white relative overflow-hidden">
-  <video
-    className="absolute top-0 left-0 w-full h-full object-cover opacity-90 z-0"
-    autoPlay
-    loop
-    muted
-    playsInline
-  >
-    <source src="/videoauto.mp4" type="video/mp4" />
-    Tu navegador no soporta el video.
-  </video>
-</section>
+
 <section>
 <div className="h-0.5 w-full overflow-hidden mb-0">
   <div className="h-full w-full bg-[#ff5c02] animate-slide" />
