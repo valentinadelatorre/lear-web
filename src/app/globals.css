@@ -1,26 +1,38 @@
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* --- Fuente base y reset --- */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background-color: white;
+  color: black;
+}
+
+/* --- Elimina azul de los inputs en mobile --- */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* --- Scrollbar minimal (opcional) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
