@@ -1,8 +1,10 @@
+import { montserrat } from "../layout";
+
 export default function TodosLosServiciosPage() {
     const servicios = [
       { titulo: "Mecánica General", desc: "Revisión y reparación integral de tu vehículo." },
       { titulo: "Instalación y Mantenimiento de GNC", desc: "Montaje y control de equipos GNC." },
-      { titulo: "Alineación y Balanceo", desc: "Mayor seguridad y confort en el manejo." },
+      { titulo: "Limpieza de inyectores", desc: "Distribución y puesta a punto." },
       { titulo: "Cambio de Aceite y Filtros", desc: "Servicio rápido para mantener tu motor en óptimas condiciones." },
       { titulo: "Frenos", desc: "Inspección, mantenimiento y reparación de frenos." },
       { titulo: "Suspensión y Tren Delantero", desc: "Diagnóstico y solución para un andar estable." },
@@ -15,7 +17,7 @@ export default function TodosLosServiciosPage() {
       <section className="relative min-h-screen overflow-hidden">
         {/* Video de fondo */}
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full opacity-20 object-cover z-0"
           autoPlay
           loop
           muted
@@ -28,7 +30,7 @@ export default function TodosLosServiciosPage() {
         {/* Contenido */}
         <main className="relative z-10 py-20 px-4 bg-[#171717]/40 text-white">
           
-        <h1 className="text-4xl font-bold text-[#ff5c02] mb-12 w-full text-center">Todos los Servicios</h1>
+        <h1 className={`${montserrat.className} text-4xl font-bold text-[#ff5c02] mb-12 w-full text-center`}>Todos los Servicios</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               {servicios.map((servicio, i) => (
@@ -36,7 +38,7 @@ export default function TodosLosServiciosPage() {
                   key={i}
                   className="p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-100 transition duration-300 bg-[#171717]/80"
                 >
-                  <h3 className="text-xl font-bold text-[#ff5c02] mb-2">{servicio.titulo}</h3>
+                  <h3 className={`${montserrat.className} text-xl font-bold text-[#ff5c02] mb-2`}>{servicio.titulo}</h3>
                   <p className="text-white">{servicio.desc}</p>
                 </div>
               ))}

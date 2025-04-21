@@ -165,7 +165,7 @@ export default function Home() {
   <div className="h-full w-full bg-[#ff5c02] animate-slide" />
 </div>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-[#ff5c02]">Formulario de Contacto</h2>
+          <h2 className={` ${montserrat.className} text-4xl font-semibold mb-16 text-[#ff5c02] mt-10`}>Formulario de Contacto</h2>
           <form className="space-y-6 text-left bg-white p-8 rounded-2xl shadow-md">
             <div>
               <label className="block mb-1 font-medium">Nombre y Apellido</label>
@@ -215,7 +215,7 @@ export default function Home() {
 </div>
 
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-[#ff5c02]">¿Por qué elegir LEAR?</h2>
+          <h2 className={` ${montserrat.className} text-4xl font-semibold mb-16 text-[#ff5c02] mt-10`}>¿Por qué elegir LEAR?</h2>
           <div className="grid gap-12 md:grid-cols-3">
             <div className="p-8 border bg-gray-100 rounded-2xl shadow-md hover:shadow-xl transition-all">
               <h3 className="text-xl text-black font-semibold mb-3">Atención Personalizada</h3>
@@ -249,7 +249,7 @@ export default function Home() {
 
     {/* Ubicación a la izquierda */}
     <div className="flex flex-col items-center md:items-start text-white space-y-3">
-      <h4 className="text-[#ff5c02] font-bold text-lg">Ubicación</h4>
+      <h4 className={`${montserrat.className} text-[#ff5c02] font-bold text-lg`} >Ubicación</h4>
       <a href="https://www.google.com/maps?q=Av.+Mosconi+193,+Lomas+del+Mirador,+Buenos+Aires" target="_blank" rel="noopener noreferrer">
         <img src="/ubicacion.png" alt="Ubicación Taller LEAR" className="w-85 h-auto rounded-md shadow-md hover:opacity-90 transition" />
       </a>
@@ -258,7 +258,7 @@ export default function Home() {
 
     {/* Contacto en el centro */}
     <div className="flex flex-col items-center md:items-start w-48 text-white space-y-3">
-      <h4 className="text-[#ff5c02] font-bold text-lg">Contacto</h4>
+      <h4 className={`${montserrat.className} text-[#ff5c02] font-bold text-lg`}>Contacto</h4>
       <p className="text-sm">info@leargnc.com.ar</p>
       <p className="text-sm">+54 11 3347 3337</p>
       <p className="text-sm">Lunes a Viernes de 9 a 18 hs</p>
@@ -266,7 +266,7 @@ export default function Home() {
 
     {/* Redes sociales a la derecha */}
     <div className="flex flex-col items-center md:items-start w-48 text-white space-y-3">
-      <h4 className="text-[#ff5c02] font-bold text-lg">Redes Sociales</h4>
+      <h4 className={`${montserrat.className} text-[#ff5c02] font-bold text-lg`}>Redes Sociales</h4>
       <p className="text-sm hover:underline cursor-pointer">Instagram</p>
       <p className="text-sm hover:underline cursor-pointer">Facebook</p>
       <p className="text-sm hover:underline cursor-pointer">WhatsApp</p>

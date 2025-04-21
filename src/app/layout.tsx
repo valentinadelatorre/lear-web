@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={cn(montserrat.className, "bg-[#1a1a1a] text-black")}>
+      <body className={cn(montserrat.className, " text-black")}>
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50 px-6 py-4 flex justify-between items-center">
       <div className="h-12 w-auto flex items-center">
   <img
@@ -27,7 +27,7 @@ export default function RootLayout({
 </div>
 
 
-<nav className="space-x-6 hidden md:flex text-[#ff5c02] font-bold">
+<nav className={`${montserrat.className} space-x-6 hidden md:flex text-[#ff5c02] font-bold`}>
   <a href="/todos-los-servicios" className="hover:underline hover:opacity-90 transition">Servicios</a>
   <a href="#nosotros" className="hover:underline hover:opacity-90 transition">Nosotros</a>
   <a href="#contacto" className="hover:underline hover:opacity-90 transition">Contacto</a>
